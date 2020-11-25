@@ -1,0 +1,562 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    background: #c0392b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8e44ad, #c0392b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8e44ad, #c0392b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-bottom: 3px solid black;    
+    display: flex;
+    margin: auto;
+    height: 10vh;
+    align-items: center; 
+    position: fixed;
+    width: 100%;   
+}
+/*------------------------------------------------------------------------------------------*/
+.logo-container,.nav-links,.contact{
+    display: flex;
+    
+}
+.logo-container{
+    flex:1; 
+    justify-content: center;
+}
+.logo{
+    font-weight: 400;
+    margin:5px;
+    margin-top: 15px;
+    color: white;    
+}
+nav{
+   flex: 2;
+}
+.nav-links{
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-link{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+.nav-link:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+.contact{
+    flex: 1;
+    justify-content:center;
+}
+.cont{
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: 35px;
+    text-decoration:none;
+}
+.cont:hover{
+    font-size:150%;
+    color: purple;
+}
+/*------------------------------------------------------------------------------------------*/
+.presentation{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 100vh;
+    align-items: center;
+}
+.introduction
+{
+    flex: 1;
+    margin-top: 120px;
+    margin-left: 45px;
+    align-content: center;
+
+}
+.intro-text h2{
+     font-size: 44px;
+     font-weight: 200;
+    color: darkslategrey;
+}
+.intro-text h1{
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size:200%; 
+    font-size: 44px;
+    font-weight: 200;
+    font-family: sans-serif;
+    animation: grad 1s linear infinite alternate;
+}
+@keyframes grad{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+.intro-text p{
+    margin-top: 2px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #585772;
+}
+.cta{
+    padding: 50px 0px 0px 0px;
+}
+.cta h1{
+    margin-top: 2px;
+    font-size: 15px;
+    color: #585772;    
+}
+.cta-select{
+    margin-top: 20px;
+    border: 2px solid black;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-size: 500% 500%;
+    background-position: 500%;
+    animation: gradient 2.5s ease infinite;
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size:1rem;
+    width: 250px;
+    height: 60px;
+    cursor: pointer; 
+}
+@keyframes gradient{
+    0%{
+        background-position: 0%;
+    }
+    50%{
+        background-position: 100%;
+    }
+    100%{
+        background-position: 0%;
+    }
+}
+.cta-select:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+.cta-add{
+    border: 2px solid #c36cbb;
+    background: transperent;
+    color: #c36cbb;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    margin: 30px 0px 0px 15px
+
+}
+.cover{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+}
+.cover img{
+    height: 100%;
+    width: 100%;   
+}
+/*------------------------------------------------------------------------------------------*/
+.big-circle{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.3;
+    height: 100%;
+    transform: rotate(280deg);
+}
+.mid-circle{
+    position: absolute;
+    top: 800px;
+    right: 300px;
+    z-index: -1;
+    height: 60%;
+    opacity: 0.4;
+}
+.small-circle{
+    position: absolute;
+    top: 500px;
+    right: 50px;
+    z-index: -1;
+    height: 60%;
+}
+@media screen and (max-width:1024px)
+{
+    .presentation{
+        flex-direction: column;
+    }
+    .introduction{
+        margin-top: 5vh;
+        text-align: center;
+    }
+    .intro-text h1{
+        font-size: 30px;
+    }
+    .intro-text p{
+        font-size: 18px;
+    }
+    .cta{
+        padding: 10px 0px 0px 0px;
+    }
+    .cover img{
+        height: 80;
+   }
+}
+/*------------------------------------------------------------------------------------------*/
+.a6{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+}
+.a6 img{
+    height: 100%;
+    width: 80%;   
+}
+.about{
+    display:flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    align-items:center;
+}
+.a2{
+    flex: 1;
+}
+.a3 h1{
+    font-weight: 500;   
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    color:transparent;
+    background-size:350%; 
+    font-size: 44px;
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+    animation: grad 1s linear infinite alternate;
+}
+@keyframes grad{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+.a3 p{
+    margin-top: 10px;
+    font-weight: 800;
+    font-size: 18px;
+    color: #585772;
+    color: darkslategrey;
+}
+.d4{
+    padding: 50px 0px 0px 0px;
+}
+.d5{
+    border: 2px solid #c36cbb;
+    border: 2px solid black;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-size: 500% 500%;
+    background-position: 500%;
+    animation: gradient 2.5s ease infinite;
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size:1rem;
+    width: 250px;
+    height: 60px;
+    cursor: pointer; 
+}
+@keyframes gradient{
+    0%{
+        background-position: 0%;
+    }
+    50%{
+        background-position: 100%;
+    }
+    100%{
+        background-position: 0%;
+    }
+}
+.d5:hover{
+    text-decoration: underline;
+    color: black;
+}
+.new-img{
+    position:absolute;
+    top: 1170px;
+    left: 0;
+    z-index: -1;
+    height: 60%;
+    opacity: 0.3;
+    transform: rotate(270deg);
+}
+/*------------------------------------------------------------------------------------------*/
+.center{
+     align-items: center;
+    padding-top: 50px;
+}
+.eh h1{
+    padding: 10px;
+    text-align: center;
+    text-decoration: underline;
+    background: #ee0979; 
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979); 
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    color:transparent;
+    background-size:300%; 
+    font-size: 44px;
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+    animation: grad 1s linear infinite alternate;
+}
+@keyframes grad{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+.t1 {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 20px;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.t1 thead tr {
+  background: #ee0979;
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+.t1 th,
+.t1 td {
+  padding: 12px 15px;
+}
+.t1 tbody tr {
+  border-bottom: 1px solid #dddd;
+}
+.t1 tbody tr:last-of-type {
+  border-bottom: 2px solid #ee0979;
+}
+.t1 td:hover{
+  font-weight: bold;
+  color: #009879;
+}
+/*-----------------------------------------------------------------------------------------*/
+.proj h1{
+    padding-top:60px; 
+    text-align: center;
+    margin-top: 30px;  
+    text-align: center;
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    color:transparent;
+    background-size:350%; 
+    font-size: 44px;
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+    animation: grad 1s linear infinite alternate;
+}
+@keyframes grad{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+
+
+
+.proj1{
+    min-height: 30vh;
+}
+.i{
+     margin-top: 30px; 
+     font-family: 'Poppins', sans-serif;   
+}
+.i1{
+    width:50%;
+    float: left;
+    text-align: center;
+}
+.i1 img:hover{
+    width: 35%;
+}
+.i1:hover{
+    color:indianred;
+}
+.i1 p{
+    font-size: 15px;
+    font-weight: 900;
+}
+.i2{
+    width:50%;
+    float: left;
+    text-align: center;
+}
+.i2 img:hover{
+    width:35%;
+}
+.i2:hover{
+    color:indianred;
+}
+.i2 p{
+    font-size: 15px;
+    font-weight: 900;
+}
+.i3{
+    width:33.3333%;
+    float: left;
+    text-align: center;
+}
+.i3 img:hover{
+    width:35%;
+}
+.i3:hover{
+    color:indianred;
+}
+.i3 p{
+    font-size: 15px;
+    font-weight: 900;
+}
+/*-----------------------------------------------------------------------------------------*/
+
+
+
+.skill{
+    padding-top: 100px;
+    min-height: 60vh;
+}
+.s h1{ 
+    padding-bottom: 40px;
+    text-align: center;
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    color:transparent;
+    background-size:400%; 
+    font-size: 44px;
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+    animation: grad 1s linear infinite alternate;
+}
+@keyframes grad{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+.s1 h4{
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    background: #21D4FD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    color:transparent;
+    background-size:200%; 
+    font-family: 'Poppins', sans-serif;
+    animation: grad 2s linear infinite alternate;
+}
+@keyframes grad{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+/*-----------------------------------------------------------------------------------------*/
+.foot{
+    max-height: 50vh;
+    border-top: 2px solid black;
+}
+.f1{
+    width:50%;
+    float: left;
+    text-align: center;
+}
+.f1 h3{
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+.f2{
+    width:50%;
+    float: left;
+    text-align: center;
+}
+.f2 h3{
+    padding-bottom: 10px;
+    text-decoration: underline; 
+}
+.f3{
+     padding: 5px 5px 5px 5px;
+   
+}
+.f3:hover img {   
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+
+
+
+
+
